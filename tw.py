@@ -28,10 +28,7 @@ def is_retweet(tweet):
 
 def is_mention(tweet):
     """Returns if a tweet is only a mention"""
-    match = re.search('\A@.*', tweet)
-    if match is None:
-        return False
-    return True
+    return not re.search('\A@.*', tweet) is None
 
 
 def get_twitter_api():
@@ -39,11 +36,12 @@ def get_twitter_api():
     secrets = configparser.ConfigParser()
     secrets.read('secrets.ini')
 
-    auth = tweepy.OAuthHandler(secrets['Twitter']['consumer_key'], secrets['Twitter']['consumer_secret'])
-    auth.set_access_token(secrets['Twitter']['access_token'], secrets['Twitter']['access_token_secret'])
+    tscr = secrets['Twitter']
 
-    tw_api = tweepy.API(auth)
-    return tw_api
+    auth = tweepy.OAuthHandler(tscr['consumer_key'], tscr['consumer_secret'])
+    auth.set_access_token(tscr['access_token'], tscr['access_token_secret'])
+
+    return tweepy.API(auth)
 
 
 def get_last_tweets(api, count):
@@ -55,9 +53,18 @@ def process_tweet(tweet):
     """Prepare a tweet message for sending"""
     if is_mention(tweet):
         return
-    if is_retweet(tweet):
-        new_tweet = is_retweet(tweet) + ' ' + saxophone.translate(re.sub('RT @.*?:', '', html.unescape(tweet)),
-                                                                  engine='twitter')
+
+    is_rt = is_retweet(tweet)
+
+    if is_rt:
+        new_tweet = (
+            is_rt +
+            ' ' +
+            saxophone.translate(
+                re.sub('RT @.*?:', '', html.unescape(tweet)),
+                engine='twitter'
+            )
+        )
     else:
         new_tweet = saxophone.translate(html.unescape(tweet), engine='twitter')
     return cut_140_chars(new_tweet)
@@ -73,24 +80,19 @@ def send_tweet(api, tweet):
 
 def db_get_all():
     """Get all IDs in the database."""
-    con = db.connect('data.db')
-    with con:
-        cur = con.cursor()
-        cur.execute('SELECT id FROM "Twitter"')
-        results = [row[0] for row in cur]
-        cur.close()
-    con.close()
-    return results
+
+    with db.connect('data.db') as con:
+        with con.cursor() as cur:
+            cur.execute('SELECT id FROM "Twitter"')
+            return [row[0] for row in cur]
 
 
 def db_insert_id(tweet_id, tweet_status):
     """Insert an ID into the database."""
-    con = db.connect('data.db')
-    with con:
-        cur = con.cursor()
-        cur.execute('INSERT into "Twitter" VALUES (?, ?);', (str(tweet_id), tweet_status,))
-        cur.close()
-    con.close()
+    with db.connect('data.db') as con:
+        with con.cursor() as cur:
+            cur.execute('INSERT into "Twitter" VALUES (?, ?);', (str(tweet_id), tweet_status,))
+
 
 
 def do_stuff():
