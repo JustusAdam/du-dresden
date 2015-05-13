@@ -22,14 +22,14 @@ translations = [
     ('extension', 'ixtenschn'),
     ('expansion', 'ixpanschn'),
     ('download', 'daunlohd'),
-    ('download_', 'runnerladen_'),
-    ('downloaden_', 'runnerladen_'),
+    ('download_', 'runnerladen'),
+    ('downloaden_', 'runnerladen'),
     ('homepage', 'hohmbejdsch'),
     ('byte', 'beit'),
     ('update', 'abdejt'),
-    ('team_', 'diehm_'),
-    ('crew_', 'kruh_'),
-    ('chat_', 'schedd_'),
+    ('team_', 'diehm'),
+    ('crew_', 'kruh'),
+    ('chat_', 'schedd'),
     ('cool', 'guhl'),
     ('cookies', 'gegse'),
     ('netiquette', 'neddigedde'),
@@ -48,10 +48,10 @@ translations = [
     ('meeting', 'dreffn'),  # 'dsusammengunfd',
     ('developer', 'endwigglor'),
     ('release', 'rielies'),
-    ('_user', '_benuddsor'),
-    ('_link_', '_vorweis_'),
+    ('_user', 'benuddsor'),
+    ('_link_', 'vorweis'),
     ('hyperlink', 'nedsvorweis'),
-    ('_fan_', '_fenn_'),
+    ('_fan_', 'fenn'),
     ('office', 'büro'),
     ('chip', 'schipp'),
     ('feedback', 'fiedbegg'),
@@ -72,23 +72,23 @@ translations = [
     ('service', 'sörwis'),
     ('haskell', 'hässgl'),
     ('news', 'njuhs'),
-    ('_new_', '_njuh_'),
-    ('_york_', '_jorg_'),
+    ('_new_', 'njuh'),
+    ('_york_', 'jorg'),
     ('layout', 'lejaud'),
-    # 'mund_': 'gusche_',
-    ('mund_', 'nischl_'),
-    ('schnitte_', 'bemme_'),
-    ('arbeit_', 'orbeit_'),
-    ('_arbeiten_', '_klechen_'),
-    ('_arbeite_', '_kleche_'),
-    ('_arbeitet_', '_klecht_'),
-    ('_arbeitest_', '_klechst_'),
-    ('_mutter_', '_olle_'),
-    ('_vater_', '_vadda_'),
+    # 'mund_': 'gusche',
+    ('mund_', 'nischl'),
+    ('schnitte_', 'bemme'),
+    ('arbeit_', 'orbeit'),
+    ('_arbeiten_', 'klechen'),
+    ('_arbeite_', 'kleche'),
+    ('_arbeitet_', 'klecht'),
+    ('_arbeitest_', 'klechst'),
+    ('_mutter_', 'olle'),
+    ('_vater_', 'vadda'),
     ('digital', 'diggedal'),
     ('medien', 'medchen'),
-    ('fernseher_', 'glotze_'),
-    ('_taxi_', '_taxe_'),
+    ('fernseher_', 'glotze'),
+    ('_taxi_', 'taxe'),
     ('fünfzig', 'fuffzich'),
     ('spam', 'sbämm'),
     ('slogan', 'slogän'),
@@ -96,17 +96,17 @@ translations = [
     ('trabant', 'trabbi'),
     ('germany', 'dschörmeni'),
     ('community', 'gemeenschofd'),
-    ('chemnitz', 'gorl-Morgs-Stodd'),
+    ('chemnitz', 'Gorl-Morgs-Stodd'),
     # Karl-Marx-Denkmal -> Nischl
     # ein - 'n
     # eine - 'ne
     # nicht wahr - nuwor
     # kannst du - kannste
-    ('_nun_', '_nu_'),
-    ('_aber_', '_awor_'),
-    ('_nein_', '_nee_'),
-    ('_auch_', '_och_'),
-    ('_gleich_', '_glei_'),
+    ('_nun_', 'nu'),
+    ('_aber_', 'awor'),
+    ('_nein_', 'nee'),
+    ('_auch_', 'och'),
+    ('_gleich_', 'glei'),
     ('ex', 'eggs'),  # Experte
     ('ax', 'aggs'),  # Praxis
     ('ox', 'oggs'),  # paradox
@@ -116,16 +116,16 @@ translations = [
     ('st', 'schd'),
     # St am Anfang fast immer Scht, Ausnahme: Stil, St., Story
     # 'sp': 'sb',
-    ('st_', 'sd_'),   # Analyst, Gerüst, Ast, fast
-    ('ste_', 'sde_'),
-    ('stel_', 'sdl_'),
-    ('stem_', 'sdm_'),
-    ('sten_', 'sdn_'),
-    ('ster_', 'sder_'),
-    ('stes_', 'sdes_'),
-    ('stet_', 'sded_'),
-    ('spe_', 'sbe_'),
-    ('spen_', 'sbn_'),
+    ('st_', 'sd'),   # Analyst, Gerüst, Ast, fast
+    ('ste_', 'sde'),
+    ('stel_', 'sdl'),
+    ('stem_', 'sdm'),
+    ('sten_', 'sdn'),
+    ('ster_', 'sder'),
+    ('stes_', 'sdes'),
+    ('stet_', 'sded'),
+    ('spe_', 'sbe'),
+    ('spen_', 'sbn'),
     ('ck', 'gg'),
     ('k', 'g'),
     ('th', 'd'),
@@ -147,24 +147,24 @@ translations = [
     ('agen', 'ahchn'),  # tragen
     ('ägen', 'ähchn'),  # Mägen
     ('egen', 'ehchn'),  # legen
-    ('_chemn', '_gemn'),
-    ('_che', '_sche'),
-    ('_den_', '_den_'),  # prevent from being shrinked to 'dn'
-    ('_die_', '_de_'),
-    ('der_', 'dor_'),
-    ('ter_', 'dor_'),
+    ('_chemn', 'gemn'),
+    ('_che', 'sche'),
+    ('_den_', 'den'),  # prevent from being shrinked to 'dn'
+    ('_die_', 'de'),
+    ('der_', 'dor'),
+    ('ter_', 'dor'),
     ('ein', 'een'),
-    ('nen_', 'n\'_'),
-    ('en_', 'n_'),
-    ('el_', 'l_'),
-    ('nd_', 'nn_'),
+    ('nen_', 'n\''),
+    ('en_', 'n'),
+    ('el_', 'l'),
+    ('nd_', 'nn'),
     ('tion', 'dsion'),
     ('tionen', 'dsion\''),
-    ('ig_', 'ich_'),
-    ('igen_', 'chen_'),  # mäßigen
+    ('ig_', 'ich'),
+    ('igen_', 'chen'),  # mäßigen
     ('pzig', 'pzisch'),  # Leipzig
-    ('mpf_', 'mff_'),
-    ('pf_', 'bb_'),
+    ('mpf_', 'mff'),
+    ('pf_', 'bb'),
 
     ('eipzig', 'eibzsch'),
     ('der', 'dor'),
@@ -173,12 +173,31 @@ translations = [
 ].sort(key=lambda a: len(a[0]), reverse=True)
 
 
+def compile_if_regex(regex):
+    if regex.startswith('_'):
+
+        if regex.endswith('_'):
+            return re.compile(r'(\b)%s(\b)' % source[1:-1])
+        else:
+            return re.compile(r'(\b)%s' % source[1:])
+
+    elif regex.endswith('_'):
+        return re.compile(r'%s(\b)' % source[:-1])
+
+    else:
+        return word
+
+
+# compile all underscore pseude regexes in the translations
+translations = list(map(lambda a: (compile_if_regex(a[0]), a[1]), translations))
+
+
 def handle_one(word):
     if engine == 'twitter':
         if re.match('@.*?', word):
             # don't translate twitter account mentions
             return word
-            
+
         if re.match('https?://.*', word):
             # don't translate URLs
             return word
@@ -203,29 +222,28 @@ def translate(phrase, engine='none', method='local'):
     return ' '.join(map(handle_one, phrase.split()))
 
 
+def apply_one_substitution(source, translation, word):
+    """apply one substitution to one word"""
+
+    if isinstance(source, str):
+        logging.debug('replacing[syllable] {} with {} to {}'.format(source, translation, word))
+        return word.replace(source, translation)
+
+    else:
+        # source is a compiled regex
+        logging.debug('replacing[regex] {} with {} to {}'.format(source, translation, word))
+        return re.sub(regex, translation, word)
+
+
 def apply_substitutions(word):
-    """Apply the local translations to a given word."""
+    """Apply all local translations to a given word."""
+
     word = word.lower()
+
     for source, translation in translations:
-        if translation.startswith('_'):
 
-            if translation.endswith('_'):
-                regex = re.compile(r'(\b)%s(\b)' % source[1:-1])
-                word = re.sub(regex, translation[1:-1], word)
-                logging.debug('replacing[full word] {} with {} to {}'.format(source, translation, word))
-            else:
-                regex = re.compile(r'(\b)%s' % source[1:])
-                word = re.sub(regex, translation[1:], word)
-                logging.debug('replacing[prefix] {} with {} to {}'.format(source, translation, word))
+        word = apply_one_substitution(source, translation, word)
 
-        elif translation.endswith('_'):
-            regex = re.compile(r'%s(\b)' % source[:-1])
-            word = re.sub(regex, translation[:-1], word)
-            logging.debug('replacing[suffix] {} with {} to {}'.format(source, translation, word))
-
-        else:
-            word = word.replace(source, translation)
-            logging.debug('replacing[syllable] {} with {} to {}'.format(source, translation, word))
     return word
 
 
