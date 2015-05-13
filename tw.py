@@ -28,7 +28,7 @@ def is_retweet(tweet):
 
 def is_mention(tweet):
     """Returns if a tweet is only a mention"""
-    return not re.search('\A@.*', tweet) is None
+    return re.search('\A@.*', tweet) is not None
 
 
 def get_twitter_api():
