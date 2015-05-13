@@ -189,7 +189,10 @@ def compile_if_regex(regex):
 
 
 # compile all underscore pseude regexes in the translations
-translations = list(map(lambda a: (compile_if_regex(a[0]), a[1]), translations))
+translations = [
+    (compile_if_regex(source), translation)
+    for source, translation in translations
+]
 
 
 def handle_one(word):
