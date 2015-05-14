@@ -170,7 +170,9 @@ translations = [
     ('der', 'dor'),
     ('auch', 'och'),
     ('schläge', 'schlähche')
-].sort(key=lambda a: len(a[0]), reverse=True)
+]
+
+translations.sort(key=lambda a: len(a[0]), reverse=True)
 
 
 def compile_if_regex(regex):
