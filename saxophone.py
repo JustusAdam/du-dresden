@@ -175,19 +175,19 @@ translations = [
 translations.sort(key=lambda a: len(a[0]), reverse=True)
 
 
-def compile_if_regex(regex):
-    if regex.startswith('_'):
+def compile_if_regex(source):
+    if source.startswith('_'):
 
-        if regex.endswith('_'):
+        if source.endswith('_'):
             return re.compile(r'(\b)%s(\b)' % source[1:-1])
         else:
             return re.compile(r'(\b)%s' % source[1:])
 
-    elif regex.endswith('_'):
+    elif source.endswith('_'):
         return re.compile(r'%s(\b)' % source[:-1])
 
     else:
-        return word
+        return source
 
 
 # compile all underscore pseude regexes in the translations
