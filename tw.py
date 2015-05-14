@@ -81,17 +81,26 @@ def send_tweet(api, tweet):
 def db_get_all():
     """Get all IDs in the database."""
 
-    with db.connect('data.db') as con:
-        with con.cursor() as cur:
-            cur.execute('SELECT id FROM "Twitter"')
-            return [row[0] for row in cur]
+    con = db.connect('data.db')
+    cur = con.cursor()
+
+    with con:
+        cur.execute('SELECT id FROM "Twitter"')
+
+    results = [row[0] for row in cur]
+    cur.close()
+    con.close()
+    return results
 
 
 def db_insert_id(tweet_id, tweet_status):
     """Insert an ID into the database."""
-    with db.connect('data.db') as con:
-        with con.cursor() as cur:
-            cur.execute('INSERT into "Twitter" VALUES (?, ?);', (str(tweet_id), tweet_status,))
+    con = db.connect('data.db')
+    cur = con.cursor()
+    with con:
+        cur.execute('INSERT into "Twitter" VALUES (?, ?);', (str(tweet_id), tweet_status,))
+    cur.close()
+    con.close()
 
 
 
