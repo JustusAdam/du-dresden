@@ -4,6 +4,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 import logging
+from functools import reduce
 
 logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.DEBUG)
 
@@ -199,12 +200,8 @@ translations = [
 
 def handle_one(word):
     if engine == 'twitter':
-        if re.match('@.*?', word):
+        if re.match('@.*?', word) or re.match('https?://.*', word):
             # don't translate twitter account mentions
-            return word
-
-        if re.match('https?://.*', word):
-            # don't translate URLs
             return word
 
     if method == 'saxophone':
@@ -240,16 +237,14 @@ def apply_one_substitution(source, translation, word):
         return re.sub(regex, translation, word)
 
 
+def reducer_func(trans_tuple, word):
+    source, translation = trans_tuple
+    return apply_one_substitution(source, translation, word)
+
+
 def apply_substitutions(word):
     """Apply all local translations to a given word."""
-
-    word = word.lower()
-
-    for source, translation in translations:
-
-        word = apply_one_substitution(source, translation, word)
-
-    return word
+    return reduce(reducer_func, word.lower())
 
 
 def send_saxophone_request(word):
